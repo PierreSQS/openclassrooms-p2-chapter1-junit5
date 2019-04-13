@@ -1,31 +1,37 @@
 package com.openclassrooms.testing;
 
-import org.junit.Test;
-import org.junit.experimental.categories.Category;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 
 import static java.lang.Math.PI;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
 
-@Category(Categories.ConversionTests.class)
+@Tag("ConversionTests")
 public class ConversionCalculatorTest {
 
     private ConversionCalculator calculatorUnderTest = new ConversionCalculator();
 
 
+    @Tag("FahrenheitTests")
+    @Tag("TemperatureTests")
+    @DisplayName("Given zero degrees in celsius When converted to Fahrenheit Then the result is 32")
     @Test
-    @Category({Categories.FahrenheitTests.class, Categories.TemperatureTests.class})
-    public void celciusToFahrenheit_returnsAFahrenheitTempurature_whenCelciusIsPositive() {
-        Double actualFahrenheit = calculatorUnderTest.celciusToFahrenheit(0.0 );
+    public void celsiusToFahrenheit_returnsAFahrenheitTempurature_whenCelsiusIsPositive() {
+        Double actualFahrenheit = calculatorUnderTest.celsiusToFahrenheit(0.0 );
         assertThat( actualFahrenheit, is(equalTo(32.0)) );
     }
 
+
+    @Tag("TemperatureTests")
+    @DisplayName("Given 32 degrees in Fahrenheit when converted to celsius Then the result is zero")
     @Test
-    @Category({Categories.TemperatureTests.class})
-    public void fahrenheitToCelcius() {
-        Double actualCelcius = calculatorUnderTest.fahrenheitToCelcius(32.0);
-        assertThat( actualCelcius, is(equalTo(0.0)));
+    public void fahrenheitToCelsius() {
+        Double actualCelsius = calculatorUnderTest.fahrenheitToCelsius(32.0);
+        assertThat( actualCelsius, is(equalTo(0.0)));
     }
 
     @Test
