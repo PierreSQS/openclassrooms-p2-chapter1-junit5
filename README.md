@@ -1,9 +1,7 @@
-# Helpful JUnit Annotations
-## Supporting JUnit4 Examples
+# Java Testing: Part 2 - Chapter 1
+## Supporting JUnit5 Examples
 
-* You can run the tests with `clean mvn test`
+* You can run the tests with `mvn clean test`
 * These examples are fully described in my Openclassrooms course on testing in Java.
-* Run just the conversion tests with `mvn -Dgroups 'com.openclassrooms.testing.Categories$ConversionTests' test`
-* *Don't forget the quotes around the class name or the $ might mean something completely different on your command line*
- 
-git checkout junit5
+* Run just the conversion tests with `mvn test -Dgroups='ConversionTests'`
+* Explore the code. You'll have to run the tests in your IDE to see the power of @DisplayName 
