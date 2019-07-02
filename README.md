@@ -6,5 +6,5 @@
 * Explore the code. You'll have to run the tests in your IDE to see the power of @DisplayName 
 
 ## A Fun Challange
-* Have a go at modifying ConversionCalculatorTest and converting miles to kilometers. You can find the conversion factor on line! Write your test first and modify the ConversationCalcualtor
+* Have a go at modifying ConversionCalculatorTest and converting miles to kilometers. You can find the conversion factor online! Write your test first and modify the ConversionCalcualtor
 * It will be similar to the Celsius to Fahrenheit conversion which is already there!
