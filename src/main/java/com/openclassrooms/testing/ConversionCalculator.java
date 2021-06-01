@@ -15,6 +15,9 @@ public class ConversionCalculator {
     // constant to raise radius by when calculating a circle
     private static final double POWER_OF_RADIUS = 2.0;
 
+    // constant to raise radius by when calculating a circle
+    private static final double METERS_TO_KM_MULTIPLIER = 1000.0;
+
     /**
      * Converts centigrade to fahrenheit.
      * @param celsiusTemperature to convert
@@ -27,7 +30,7 @@ public class ConversionCalculator {
     /**
      * Converts fahrenheit to centigrade
      * @param fahrenheitTemperature to convert
-     * @return
+     * @return CelsiusTemperature
      */
     public Double fahrenheitToCelsius(Double fahrenheitTemperature) {
         return (fahrenheitTemperature - BASE_FAHRENHEIT) * CELSIUS_FAHRENHEIT_CONVERSION_FACTOR;
@@ -52,4 +55,12 @@ public class ConversionCalculator {
 
     }
 
+    /**
+     * Converts meters to kilometers
+     * @param meters (amount of)
+     * @return the equivalent amount of kilometers
+     */
+    public Double metersToKilometers(double meters) {
+        return meters / METERS_TO_KM_MULTIPLIER;
+    }
 }
